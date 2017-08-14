@@ -33,6 +33,7 @@ mean
 median <- median(tapply(data$steps, data$date, sum, na.rm=TRUE))
 median
 ```
+The mean and the median are 9354.23 and 10395 respectively.
 
 #What is the average daily activity pattern?
 
@@ -74,7 +75,7 @@ median_NAfilled
 ```
 ![plot of chunk sample panel plot](instructions_fig/Figure3.png)
 
-The mean and median in the filled data set are higher than in the original data set.
+The mean and median in the filled data set are 10581.01 and 10395 respectively; higher than in the original data set.
 
 #Are there differences in activity patterns between weekdays and weekends?
 
