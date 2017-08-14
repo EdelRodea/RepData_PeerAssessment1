@@ -66,14 +66,14 @@ daily_steps_NAfilled[is.na(daily_steps)] <- rep(mean, length(daily_steps_NAfille
 
 hist(daily_steps_NAfilled, main="Histogram of daily steps", xlab="Daily steps", ylim=c(0, 40))
 
-![plot of chunk sample panel plot](instructions_fig/Figure3.png)
-
 mean_NAfilled <- mean(daily_steps_NAfilled)
 mean_NAfilled
 
 median_NAfilled <- median(daily_steps_NAfilled)
 median_NAfilled
 ```
+![plot of chunk sample panel plot](instructions_fig/Figure3.png)
+
 The mean and median in the filled data set are higher than in the original data set.
 
 #Are there differences in activity patterns between weekdays and weekends?
