@@ -24,7 +24,7 @@ par(mfrow=c(1,1))
 daily_steps <- tapply(data$steps, data$date, sum)
 hist(daily_steps, main="Histogram of daily steps", xlab="Daily steps", ylim=c(0, 40))
 ```
-
+![plot of chunk sample panel plot](instructions_fig/Figure1.png)
 3. Mean and median number of steps taken each day
 ```{r}
 mean <- mean(tapply(data$steps, data$date, sum, na.rm=TRUE))
