@@ -42,6 +42,7 @@ mean_daily_steps <- tapply(data$steps, data$date, mean, na.rm=TRUE)
 ts_mds <- ts(mean_daily_steps)
 plot(ts_mds[!is.na(ts_mds)], type="l", main="Time series of the mean daily steps", xlab="Day", ylab="Mean daily steps", ylim=c(0,80))
 ```
+![plot of chunk sample panel plot](instructions_fig/Figure2.png)
 
 5. The 5-minute interval that, on average, contains the maximum number of steps
 ```{r}
@@ -64,6 +65,8 @@ daily_steps_NAfilled <- daily_steps
 daily_steps_NAfilled[is.na(daily_steps)] <- rep(mean, length(daily_steps_NAfilled[is.na(daily_steps)]))
 
 hist(daily_steps_NAfilled, main="Histogram of daily steps", xlab="Daily steps", ylim=c(0, 40))
+
+![plot of chunk sample panel plot](instructions_fig/Figure3.png)
 
 mean_NAfilled <- mean(daily_steps_NAfilled)
 mean_NAfilled
@@ -93,3 +96,4 @@ axis(2, at=c(0,50,100, 150, 200, 250), labels=(c(0,50,100, 150, 200, 250)), cex.
 plot(interval_stepsweekends, yaxt= "n", main="Average number of steps taken\n per 5-minute interval across weekends", xlab="5-minute interval", ylab="Mean number of steps", ylim=c(0,250), xlim=c(0,300), type="l", col="red")
 axis(2, at=c(0,50,100, 150, 200, 250), labels=(c(0,50,100, 150, 200, 250)), cex.axis=0.8)
 ```
+![plot of chunk sample panel plot](instructions_fig/Figure4.png)
